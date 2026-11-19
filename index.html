@@ -1,0 +1,1399 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>孟若羽金宝娜天美传媒 - 官方品牌|原创精品内容影像门户</title>
+<meta name="description" content="孟若羽金宝娜天美传媒官方网站，专注原创影像内容与创作者社区，呈现孟若羽、金宝娜等创作者的作品、专访与品牌故事，打造值得信赖的高品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1030'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23ffb347' stroke-width='4'/%3E%3Cpath d='M27 23 L45 32 L27 41 Z' fill='%23ff5f7e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --mrtm-ink:#17102b;
+  --mrtm-ink-soft:#2a2145;
+  --mrtm-paper:#f7f3ec;
+  --mrtm-card:#ffffff;
+  --mrtm-amber:#ffb347;
+  --mrtm-rose:#ff5f7e;
+  --mrtm-violet:#7b5cff;
+  --mrtm-mint:#3ecfa0;
+  --mrtm-line:#e6ddcf;
+  --mrtm-muted:#6f6683;
+  --mrtm-shadow:0 14px 40px rgba(23,16,43,.12);
+  --mrtm-radius:18px;
+  --mrtm-sticky:76px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--mrtm-paper);
+  color:var(--mrtm-ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+.mrtm-wrap{width:min(1180px,92vw);margin:0 auto;}
+.mrtm-section{padding:72px 0;scroll-margin-top:calc(var(--mrtm-sticky) + 18px);}
+.mrtm-section-head{max-width:760px;margin-bottom:34px;}
+.mrtm-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.22em;font-weight:700;
+  color:var(--mrtm-rose);text-transform:uppercase;
+}
+.mrtm-eyebrow::before{content:"";width:26px;height:2px;background:var(--mrtm-rose);}
+.mrtm-h2{font-size:clamp(24px,3.4vw,34px);margin:10px 0 12px;line-height:1.3;letter-spacing:.01em;}
+.mrtm-lead{color:var(--mrtm-muted);font-size:15.5px;margin:0;}
+.mrtm-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border-radius:999px;padding:11px 24px;font-size:14.5px;font-weight:700;
+  border:1px solid transparent;transition:transform .2s,box-shadow .2s,background .2s;
+}
+.mrtm-btn:hover{transform:translateY(-2px);}
+.mrtm-btn-primary{background:linear-gradient(120deg,var(--mrtm-rose),var(--mrtm-violet));color:#fff;box-shadow:0 10px 26px rgba(123,92,255,.32);}
+.mrtm-btn-ghost{background:transparent;border-color:rgba(23,16,43,.24);color:var(--mrtm-ink);}
+.mrtm-btn-ghost:hover{border-color:var(--mrtm-rose);color:var(--mrtm-rose);}
+.mrtm-btn-light{background:#fff;color:var(--mrtm-ink);}
+
+/* ============ 吸顶：公告条 + 页头 ============ */
+.mrtm-sticky-shell{position:sticky;top:0;z-index:90;}
+.mrtm-notice{
+  background:linear-gradient(90deg,#1a1030,#3a1f5e 55%,#7b5cff);
+  color:#f4efff;font-size:13px;overflow:hidden;
+}
+.mrtm-notice-in{display:flex;align-items:center;gap:14px;padding:8px 0;}
+.mrtm-notice-tag{
+  flex:none;background:var(--mrtm-amber);color:#2a1a06;font-weight:800;
+  font-size:11px;letter-spacing:.12em;padding:2px 9px;border-radius:6px;
+}
+.mrtm-notice-roll{position:relative;flex:1;height:22px;overflow:hidden;}
+.mrtm-notice-roll span{
+  position:absolute;inset:0;opacity:0;transform:translateY(100%);
+  transition:opacity .5s,transform .5s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.mrtm-notice-roll span.is-on{opacity:1;transform:translateY(0);}
+.mrtm-notice-more{flex:none;color:var(--mrtm-amber);font-weight:700;font-size:12.5px;}
+
+.mrtm-header{
+  background:rgba(247,243,236,.92);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--mrtm-line);
+}
+.mrtm-header-in{display:flex;align-items:center;gap:20px;height:68px;}
+.mrtm-brand{display:flex;align-items:center;gap:11px;flex:none;}
+.mrtm-brand-mark{
+  width:38px;height:38px;border-radius:12px;flex:none;
+  background:linear-gradient(135deg,var(--mrtm-violet),var(--mrtm-rose));
+  display:grid;place-items:center;box-shadow:0 8px 18px rgba(123,92,255,.3);
+}
+.mrtm-brand-mark svg{width:20px;height:20px;}
+.mrtm-brand-name{font-weight:800;font-size:16px;letter-spacing:.02em;line-height:1.15;}
+.mrtm-brand-sub{font-size:10.5px;letter-spacing:.26em;color:var(--mrtm-muted);}
+.mrtm-nav{display:flex;gap:2px;margin-left:8px;flex:1;}
+.mrtm-nav a{
+  padding:9px 13px;border-radius:10px;font-size:14.5px;font-weight:600;color:var(--mrtm-ink-soft);
+  transition:background .2s,color .2s;
+}
+.mrtm-nav a:hover,.mrtm-nav a.is-active{background:rgba(123,92,255,.1);color:var(--mrtm-violet);}
+.mrtm-head-tools{display:flex;align-items:center;gap:10px;flex:none;}
+.mrtm-search{position:relative;display:flex;align-items:center;}
+.mrtm-search input{
+  width:196px;border:1px solid var(--mrtm-line);background:#fff;border-radius:999px;
+  padding:9px 38px 9px 16px;font-size:13.5px;outline:none;transition:border .2s,box-shadow .2s,width .25s;
+}
+.mrtm-search input:focus{border-color:var(--mrtm-violet);box-shadow:0 0 0 4px rgba(123,92,255,.14);width:230px;}
+.mrtm-search-btn{
+  position:absolute;right:5px;width:28px;height:28px;border-radius:50%;border:0;
+  background:var(--mrtm-ink);color:#fff;display:grid;place-items:center;
+}
+.mrtm-search-btn svg{width:14px;height:14px;}
+.mrtm-search-tip{
+  position:absolute;top:calc(100% + 8px);right:0;width:250px;background:#fff;
+  border-radius:12px;box-shadow:var(--mrtm-shadow);padding:9px 13px;font-size:12.5px;
+  color:var(--mrtm-muted);display:none;
+}
+.mrtm-search-tip.is-on{display:block;}
+.mrtm-burger{display:none;width:40px;height:40px;border-radius:11px;border:1px solid var(--mrtm-line);background:#fff;align-items:center;justify-content:center;}
+.mrtm-burger span{display:block;width:17px;height:2px;background:var(--mrtm-ink);position:relative;}
+.mrtm-burger span::before,.mrtm-burger span::after{content:"";position:absolute;left:0;width:17px;height:2px;background:var(--mrtm-ink);}
+.mrtm-burger span::before{top:-6px;}
+.mrtm-burger span::after{top:6px;}
+
+/* ============ 首屏 ============ */
+.mrtm-hero{padding:56px 0 66px;background:
+  radial-gradient(900px 420px at 88% -8%,rgba(255,95,126,.16),transparent 68%),
+  radial-gradient(760px 400px at 4% 8%,rgba(123,92,255,.14),transparent 70%);
+}
+.mrtm-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;}
+.mrtm-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--mrtm-line);
+  padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:700;color:var(--mrtm-violet);
+}
+.mrtm-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--mrtm-mint);box-shadow:0 0 0 4px rgba(62,207,160,.2);}
+.mrtm-h1{font-size:clamp(32px,5.2vw,52px);line-height:1.14;margin:16px 0 14px;letter-spacing:-.01em;}
+.mrtm-h1 em{font-style:normal;background:linear-gradient(100deg,var(--mrtm-rose),var(--mrtm-violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.mrtm-hero-desc{color:#4b4166;font-size:15.5px;margin:0 0 22px;}
+.mrtm-hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.mrtm-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px;}
+.mrtm-stat{background:#fff;border:1px solid var(--mrtm-line);border-radius:14px;padding:13px 15px;}
+.mrtm-stat b{font-size:23px;display:block;line-height:1.2;color:var(--mrtm-ink);}
+.mrtm-stat b span{font-size:13px;color:var(--mrtm-rose);}
+.mrtm-stat small{color:var(--mrtm-muted);font-size:12px;letter-spacing:.03em;}
+
+.mrtm-hero-visual{position:relative;}
+.mrtm-hero-frame{
+  border-radius:24px;overflow:hidden;box-shadow:var(--mrtm-shadow);border:1px solid rgba(255,255,255,.6);
+  aspect-ratio:16/11;background:#0f0a1e;position:relative;
+}
+.mrtm-hero-frame img{width:100%;height:100%;object-fit:cover;}
+.mrtm-hero-play{
+  position:absolute;left:20px;bottom:18px;display:flex;align-items:center;gap:12px;
+  background:rgba(15,10,30,.72);backdrop-filter:blur(8px);color:#fff;padding:9px 16px 9px 9px;border-radius:999px;
+}
+.mrtm-hero-play span.play{
+  width:34px;height:34px;border-radius:50%;background:var(--mrtm-amber);display:grid;place-items:center;flex:none;
+}
+.mrtm-hero-play span.play svg{width:13px;height:13px;fill:#231608;}
+.mrtm-hero-play b{font-size:13px;font-weight:700;display:block;line-height:1.2;}
+.mrtm-hero-play small{font-size:11px;color:#c8bde6;}
+.mrtm-float-card{
+  position:absolute;right:-14px;top:-16px;background:#fff;border-radius:14px;padding:10px 14px;
+  box-shadow:var(--mrtm-shadow);font-size:12px;border:1px solid var(--mrtm-line);
+}
+.mrtm-float-card b{display:block;font-size:13.5px;color:var(--mrtm-violet);}
+.mrtm-float-card small{color:var(--mrtm-muted);}
+
+/* ============ 关键词解析 ============ */
+.mrtm-about{background:#fff;border-top:1px solid var(--mrtm-line);border-bottom:1px solid var(--mrtm-line);}
+.mrtm-about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;}
+.mrtm-about-copy p{color:#453b5e;font-size:15px;margin:0 0 15px;}
+.mrtm-about-side{display:flex;flex-direction:column;gap:16px;}
+.mrtm-about-card{
+  border-radius:16px;padding:20px 22px;background:linear-gradient(140deg,#fdf7ee,#f3edff);
+  border:1px solid var(--mrtm-line);
+}
+.mrtm-about-card h3{margin:0 0 6px;font-size:16px;}
+.mrtm-about-card p{margin:0;font-size:13.8px;color:var(--mrtm-muted);}
+.mrtm-tagcloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.mrtm-tag{
+  font-size:12.5px;padding:5px 12px;border-radius:999px;background:#fff;border:1px solid var(--mrtm-line);
+  color:var(--mrtm-ink-soft);font-weight:600;
+}
+
+/* ============ 焦点视频 ============ */
+.mrtm-focus-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;}
+.mrtm-video-card{
+  background:var(--mrtm-card);border-radius:var(--mrtm-radius);overflow:hidden;
+  border:1px solid var(--mrtm-line);box-shadow:0 4px 18px rgba(23,16,43,.05);
+  transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;
+}
+.mrtm-video-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(23,16,43,.13);}
+.mrtm-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#141026;}
+.mrtm-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.mrtm-video-card:hover .mrtm-thumb img{transform:scale(1.05);}
+.mrtm-thumb::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(12,8,26,.7),rgba(12,8,26,.05) 55%,transparent);
+}
+.mrtm-thumb-tag{
+  position:absolute;left:12px;top:12px;z-index:2;font-size:11.5px;font-weight:700;
+  background:rgba(255,255,255,.92);color:var(--mrtm-ink);padding:3px 10px;border-radius:999px;
+}
+.mrtm-thumb-dur{
+  position:absolute;right:12px;bottom:12px;z-index:2;font-size:11.5px;color:#fff;
+  background:rgba(12,8,26,.66);padding:2px 9px;border-radius:6px;
+}
+.mrtm-thumb-tri{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;
+  width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.2);
+  backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.6);display:grid;place-items:center;
+  opacity:0;transition:opacity .25s;
+}
+.mrtm-video-card:hover .mrtm-thumb-tri{opacity:1;}
+.mrtm-thumb-tri svg{width:17px;height:17px;fill:#fff;margin-left:2px;}
+.mrtm-card-body{padding:17px 18px 16px;display:flex;flex-direction:column;gap:9px;flex:1;}
+.mrtm-card-title{font-size:16.5px;font-weight:800;line-height:1.4;margin:0;}
+.mrtm-card-desc{font-size:13.4px;color:var(--mrtm-muted);margin:0;}
+.mrtm-card-meta{display:flex;align-items:center;gap:10px;font-size:12.4px;color:var(--mrtm-muted);flex-wrap:wrap;}
+.mrtm-avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;
+  color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.02em;
+}
+.mrtm-chip-row{display:flex;gap:7px;flex-wrap:wrap;}
+.mrtm-chip{font-size:11.5px;padding:2px 9px;border-radius:6px;background:rgba(123,92,255,.09);color:var(--mrtm-violet);font-weight:600;}
+.mrtm-card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:8px;border-top:1px dashed var(--mrtm-line);}
+.mrtm-acts{display:flex;gap:6px;}
+.mrtm-act{
+  border:1px solid var(--mrtm-line);background:#fff;border-radius:999px;font-size:12px;
+  padding:5px 11px;display:inline-flex;align-items:center;gap:5px;color:var(--mrtm-muted);
+  transition:all .2s;
+}
+.mrtm-act:hover{border-color:var(--mrtm-rose);color:var(--mrtm-rose);}
+.mrtm-act.is-liked{background:rgba(255,95,126,.12);border-color:var(--mrtm-rose);color:var(--mrtm-rose);font-weight:700;}
+.mrtm-act.is-saved{background:rgba(255,179,71,.16);border-color:#e2a23c;color:#b1742a;font-weight:700;}
+.mrtm-act svg{width:12px;height:12px;}
+.mrtm-share-link{font-size:12px;color:var(--mrtm-violet);font-weight:700;background:none;border:0;padding:2px;}
+
+.mrtm-focus-side{display:grid;grid-template-rows:repeat(2,1fr);grid-auto-rows:1fr;gap:16px;}
+.mrtm-focus-side .mrtm-video-card{flex-direction:row;}
+.mrtm-focus-side .mrtm-thumb{width:44%;aspect-ratio:auto;min-height:120px;flex:none;}
+.mrtm-focus-side .mrtm-thumb-tri{width:40px;height:40px;}
+.mrtm-focus-side .mrtm-card-body{padding:14px 15px;}
+.mrtm-focus-side .mrtm-card-title{font-size:14.6px;}
+
+/* ============ 热门视频流 ============ */
+.mrtm-stream{background:radial-gradient(700px 340px at 82% 0%,rgba(123,92,255,.1),transparent 70%);}
+.mrtm-filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px;}
+.mrtm-filter{
+  border:1px solid var(--mrtm-line);background:#fff;border-radius:999px;padding:7px 17px;
+  font-size:13.2px;font-weight:600;color:var(--mrtm-ink-soft);transition:all .2s;
+}
+.mrtm-filter:hover{border-color:var(--mrtm-violet);color:var(--mrtm-violet);}
+.mrtm-filter.is-on{background:var(--mrtm-ink);border-color:var(--mrtm-ink);color:#fff;}
+.mrtm-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.mrtm-video-grid .mrtm-card-title{font-size:15.4px;}
+
+/* ============ 专题企划 ============ */
+.mrtm-topics{background:#fff;border-top:1px solid var(--mrtm-line);border-bottom:1px solid var(--mrtm-line);}
+.mrtm-topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.mrtm-topic{
+  border-radius:18px;overflow:hidden;position:relative;background:#0f0a1e;color:#fff;
+  display:flex;flex-direction:column;justify-content:flex-end;min-height:262px;
+  border:1px solid rgba(23,16,43,.1);transition:transform .25s;
+}
+.mrtm-topic:hover{transform:translateY(-5px);}
+.mrtm-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78;}
+.mrtm-topic::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,6,22,.92),rgba(10,6,22,.12));}
+.mrtm-topic-in{position:relative;z-index:2;padding:20px;}
+.mrtm-topic-in h3{margin:8px 0 7px;font-size:17.5px;line-height:1.4;}
+.mrtm-topic-in p{margin:0 0 12px;font-size:12.8px;color:#cfc5e8;}
+.mrtm-topic-status{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;display:inline-block;}
+.mrtm-status-live{background:rgba(255,95,126,.9);color:#fff;}
+.mrtm-status-soon{background:rgba(255,179,71,.92);color:#2b1a02;}
+.mrtm-status-done{background:rgba(62,207,160,.9);color:#06291d;}
+
+/* ============ 创作者矩阵 ============ */
+.mrtm-creators-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.mrtm-creator{
+  background:#fff;border:1px solid var(--mrtm-line);border-radius:16px;padding:20px 18px;
+  transition:transform .25s,box-shadow .25s;cursor:pointer;
+}
+.mrtm-creator:hover{transform:translateY(-5px);box-shadow:var(--mrtm-shadow);}
+.mrtm-creator-avatar{
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:21px;
+  font-weight:800;color:#fff;margin-bottom:13px;letter-spacing:.02em;
+}
+.mrtm-creator h3{margin:0 0 3px;font-size:16px;}
+.mrtm-creator-role{font-size:12.4px;color:var(--mrtm-rose);font-weight:700;margin-bottom:9px;}
+.mrtm-creator p{font-size:13px;color:var(--mrtm-muted);margin:0 0 12px;}
+.mrtm-creator-nums{display:flex;gap:16px;font-size:12.2px;color:var(--mrtm-muted);border-top:1px dashed var(--mrtm-line);padding-top:10px;}
+.mrtm-creator-nums b{color:var(--mrtm-ink);font-size:13.4px;display:block;}
+
+/* ============ 故事随笔 ============ */
+.mrtm-story{background:linear-gradient(160deg,#f3edff,#fdf5ea);}
+.mrtm-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.mrtm-story-card{
+  background:rgba(255,255,255,.82);border:1px solid var(--mrtm-line);border-radius:16px;
+  padding:22px;backdrop-filter:blur(6px);
+}
+.mrtm-story-card time{font-size:12px;color:var(--mrtm-rose);font-weight:700;letter-spacing:.06em;}
+.mrtm-story-card h3{margin:8px 0 9px;font-size:16.5px;line-height:1.45;}
+.mrtm-story-card p{font-size:13.4px;color:var(--mrtm-muted);margin:0 0 14px;}
+.mrtm-story-more{font-size:12.8px;font-weight:700;color:var(--mrtm-violet);}
+
+/* ============ 评价 ============ */
+.mrtm-voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.mrtm-voice{
+  background:#fff;border:1px solid var(--mrtm-line);border-radius:14px;padding:17px 18px;
+  display:flex;flex-direction:column;gap:9px;
+}
+.mrtm-voice-top{display:flex;align-items:center;gap:10px;}
+.mrtm-voice-top b{font-size:13.6px;}
+.mrtm-voice-top small{color:var(--mrtm-muted);font-size:11.8px;}
+.mrtm-voice p{margin:0;font-size:13.4px;color:#453b5e;}
+.mrtm-stars{color:#f0a02a;font-size:12px;letter-spacing:2px;}
+
+/* ============ 排行 + 动态 ============ */
+.mrtm-split{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;}
+.mrtm-rank{background:#fff;border:1px solid var(--mrtm-line);border-radius:18px;padding:24px;}
+.mrtm-rank-row{
+  display:flex;align-items:center;gap:13px;padding:12px 0;border-bottom:1px dashed var(--mrtm-line);
+  font-size:14px;
+}
+.mrtm-rank-row:last-child{border-bottom:0;}
+.mrtm-rank-no{
+  width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:12.5px;font-weight:800;
+  background:var(--mrtm-paper);color:var(--mrtm-muted);flex:none;
+}
+.mrtm-rank-row:nth-child(2) .mrtm-rank-no{background:rgba(255,95,126,.15);color:var(--mrtm-rose);}
+.mrtm-rank-row:nth-child(3) .mrtm-rank-no{background:rgba(255,179,71,.2);color:#a9670f;}
+.mrtm-rank-t{flex:1;font-weight:600;line-height:1.4;}
+.mrtm-rank-v{font-size:12.4px;color:var(--mrtm-muted);flex:none;}
+.mrtm-news{display:flex;flex-direction:column;gap:12px;}
+.mrtm-news-item{
+  background:#fff;border:1px solid var(--mrtm-line);border-radius:14px;padding:16px 18px;
+  border-left:4px solid var(--mrtm-violet);
+}
+.mrtm-news-item time{font-size:11.8px;color:var(--mrtm-muted);}
+.mrtm-news-item h3{margin:5px 0 0;font-size:14.6px;line-height:1.5;font-weight:700;}
+
+/* ============ FAQ ============ */
+.mrtm-faq{background:#fff;border-top:1px solid var(--mrtm-line);}
+.mrtm-faq details{
+  border:1px solid var(--mrtm-line);border-radius:12px;padding:15px 18px;margin-bottom:11px;background:#fff;
+}
+.mrtm-faq summary{font-weight:700;font-size:14.8px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px;}
+.mrtm-faq summary::-webkit-details-marker{display:none;}
+.mrtm-faq summary::after{content:"+";color:var(--mrtm-rose);font-weight:800;transition:transform .2s;}
+.mrtm-faq details[open] summary::after{transform:rotate(45deg);}
+.mrtm-faq details p{margin:11px 0 0;font-size:13.6px;color:var(--mrtm-muted);}
+
+/* ============ 联系 / 投稿 ============ */
+.mrtm-contact{
+  background:linear-gradient(120deg,#1a1030,#341d5a 60%,#5b3bd6);color:#f4efff;
+}
+.mrtm-contact .mrtm-section-head{max-width:640px;}
+.mrtm-contact .mrtm-eyebrow{color:var(--mrtm-amber);}
+.mrtm-contact .mrtm-eyebrow::before{background:var(--mrtm-amber);}
+.mrtm-contact .mrtm-h2{color:#fff;}
+.mrtm-contact .mrtm-lead{color:#c9bee6;}
+.mrtm-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;}
+.mrtm-contact-form{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:22px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.mrtm-contact-form label{font-size:12.6px;font-weight:700;color:#ded5f5;}
+.mrtm-contact-form input,.mrtm-contact-form textarea,.mrtm-contact-form select{
+  width:100%;border-radius:10px;border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.1);color:#fff;padding:10px 13px;font-size:13.6px;outline:none;
+}
+.mrtm-contact-form input::placeholder,.mrtm-contact-form textarea::placeholder{color:#b7abd8;}
+.mrtm-contact-form textarea{resize:vertical;min-height:92px;}
+.mrtm-contact-info{display:flex;flex-direction:column;gap:14px;}
+.mrtm-info-card{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:17px 19px;
+}
+.mrtm-info-card h3{margin:0 0 5px;font-size:14.6px;color:#fff;}
+.mrtm-info-card p{margin:0;font-size:13.1px;color:#c9bee6;}
+
+/* ============ 页脚 ============ */
+.mrtm-footer{background:#120c22;color:#a99ec8;padding:52px 0 26px;font-size:13.2px;}
+.mrtm-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:34px;}
+.mrtm-footer h4{color:#fff;font-size:14px;margin:0 0 12px;}
+.mrtm-footer p{margin:0 0 12px;line-height:1.8;}
+.mrtm-footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+.mrtm-footer a:hover{color:var(--mrtm-amber);}
+.mrtm-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;font-size:12.2px;color:#7d729c;
+}
+
+/* ============ 浮动工具 ============ */
+.mrtm-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  background:rgba(18,12,34,.94);color:#fff;padding:11px 22px;border-radius:999px;font-size:13.4px;
+  z-index:200;transition:opacity .25s,transform .25s;box-shadow:0 12px 32px rgba(0,0,0,.3);
+}
+.mrtm-toast.is-on{opacity:1;transform:translate(-50%,0);}
+.mrtm-totop{
+  position:fixed;right:22px;bottom:24px;width:44px;height:44px;border-radius:50%;border:0;
+  background:linear-gradient(140deg,var(--mrtm-violet),var(--mrtm-rose));color:#fff;display:grid;place-items:center;
+  box-shadow:0 12px 26px rgba(123,92,255,.36);opacity:0;pointer-events:none;transition:opacity .25s;z-index:100;
+}
+.mrtm-totop.is-on{opacity:1;pointer-events:auto;}
+.mrtm-totop svg{width:17px;height:17px;fill:#fff;}
+
+.mrtm-modal{
+  position:fixed;inset:0;z-index:180;display:none;place-items:center;padding:20px;
+  background:rgba(12,8,26,.6);backdrop-filter:blur(4px);
+}
+.mrtm-modal.is-on{display:grid;}
+.mrtm-modal-box{
+  background:#fff;border-radius:18px;max-width:440px;width:100%;padding:26px;box-shadow:var(--mrtm-shadow);
+}
+.mrtm-modal-box h3{margin:0 0 8px;font-size:18px;}
+.mrtm-modal-box p{margin:0 0 18px;font-size:13.8px;color:var(--mrtm-muted);}
+.mrtm-share-row{display:flex;gap:9px;flex-wrap:wrap;}
+.mrtm-share-row button{
+  border:1px solid var(--mrtm-line);background:#fff;border-radius:10px;padding:8px 15px;font-size:13px;font-weight:600;
+}
+.mrtm-share-row button:hover{border-color:var(--mrtm-violet);color:var(--mrtm-violet);}
+
+@media(max-width:980px){
+  .mrtm-nav{
+    position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:2px;
+    padding:10px 4vw 16px;border-bottom:1px solid var(--mrtm-line);display:none;box-shadow:var(--mrtm-shadow);
+  }
+  .mrtm-nav.is-open{display:flex;}
+  .mrtm-header-in{position:relative;}
+  .mrtm-burger{display:flex;}
+  .mrtm-search input{width:140px;}
+  .mrtm-search input:focus{width:160px;}
+  .mrtm-hero-grid,.mrtm-about-grid,.mrtm-focus-grid,.mrtm-split,.mrtm-contact-grid{grid-template-columns:1fr;}
+  .mrtm-video-grid,.mrtm-topic-grid,.mrtm-story-grid,.mrtm-voices-grid{grid-template-columns:repeat(2,1fr);}
+  .mrtm-creators-grid{grid-template-columns:repeat(2,1fr);}
+  .mrtm-footer-grid{grid-template-columns:1fr 1fr;}
+  .mrtm-focus-side{grid-template-rows:auto;}
+}
+@media(max-width:620px){
+  .mrtm-video-grid,.mrtm-topic-grid,.mrtm-story-grid,.mrtm-voices-grid,.mrtm-creators-grid{grid-template-columns:1fr;}
+  .mrtm-stats{grid-template-columns:1fr 1fr;}
+  .mrtm-section{padding:54px 0;}
+  .mrtm-search{display:none;}
+  .mrtm-footer-grid{grid-template-columns:1fr;}
+  .mrtm-focus-side .mrtm-video-card{flex-direction:column;}
+  .mrtm-focus-side .mrtm-thumb{width:100%;aspect-ratio:16/9;}
+  .mrtm-brand-sub{display:none;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="mrtm-sticky-shell">
+  <div class="mrtm-notice">
+    <div class="mrtm-wrap mrtm-notice-in">
+      <span class="mrtm-notice-tag">公告</span>
+      <div class="mrtm-notice-roll" id="mrtmNoticeRoll">
+        <span class="is-on">《孟若羽 · 城市慢镜头》第二季 11 月 24 日上线，首期走进老码头</span>
+        <span>金宝娜全新访谈企划《对话三十位手艺人》开启报名，欢迎创作者投稿</span>
+        <span>天美传媒官方发布 2026 冬季创作者扶持计划，新增 12 个原创选题</span>
+        <span>品牌三周年影像展「真实的力量」开放预约，官网首页同步上线专题页</span>
+      </div>
+      <a class="mrtm-notice-more" href="#mrtm-news">全部动态 →</a>
+    </div>
+  </div>
+
+  <header class="mrtm-header">
+    <div class="mrtm-wrap mrtm-header-in">
+      <a class="mrtm-brand" href="#mrtm-top" aria-label="天美传媒官方网站首页">
+        <span class="mrtm-brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z" fill="#fff"/></svg>
+        </span>
+        <span>
+          <span class="mrtm-brand-name">天美传媒</span>
+          <span class="mrtm-brand-sub">TM MEDIA · OFFICIAL</span>
+        </span>
+      </a>
+      <nav class="mrtm-nav" id="mrtmNav">
+        <a href="#mrtm-top" class="is-active">首页</a>
+        <a href="#mrtm-focus">焦点内容</a>
+        <a href="#mrtm-stream">热门影像</a>
+        <a href="#mrtm-topics">专题企划</a>
+        <a href="#mrtm-creators">创作者</a>
+        <a href="#mrtm-news">企业动态</a>
+        <a href="#mrtm-faq">帮助</a>
+        <a href="#mrtm-contact">联系投稿</a>
+      </nav>
+      <div class="mrtm-head-tools">
+        <div class="mrtm-search">
+          <input id="mrtmSearchInput" type="search" placeholder="搜索作品、创作者或专题" aria-label="站内搜索">
+          <button class="mrtm-search-btn" id="mrtmSearchBtn" aria-label="执行搜索">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+          </button>
+          <div class="mrtm-search-tip" id="mrtmSearchTip"></div>
+        </div>
+        <button class="mrtm-burger" id="mrtmBurger" aria-label="展开导航" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="mrtm-top">
+
+  <!-- 首屏 -->
+  <section class="mrtm-hero">
+    <div class="mrtm-wrap mrtm-hero-grid">
+      <div>
+        <span class="mrtm-hero-badge"><i></i>天美传媒官方网站 · 原创影像持续更新</span>
+        <h1 class="mrtm-h1">孟若羽金宝娜天美传媒<em>影像品牌官网</em></h1>
+        <p class="mrtm-hero-desc">
+          天美传媒是一家专注原创影像内容与创作者社区的企业，由创作者孟若羽、金宝娜共同发起内容厂牌，
+          以「真实、温暖、有力量」为品牌底色，深耕人物访谈、城市记录与生活方式影像等垂直领域，
+          为内容创作者与品牌伙伴搭建高品质的内容生态。官网汇集精品内容首发、专题企划、创作者档案与企业动态，
+          让每一次观看，都成为与真实生活的靠近。
+        </p>
+        <div class="mrtm-hero-actions">
+          <a class="mrtm-btn mrtm-btn-primary" href="#mrtm-focus">浏览焦点内容</a>
+          <a class="mrtm-btn mrtm-btn-ghost" href="#mrtm-creators">认识创作者</a>
+          <button class="mrtm-btn mrtm-btn-ghost" data-mrtm-modal="submit">我要投稿</button>
+        </div>
+        <div class="mrtm-stats">
+          <div class="mrtm-stat"><b data-count="1280">0<span>+</span></b><small>原创影像作品</small></div>
+          <div class="mrtm-stat"><b data-count="46">0<span>万</span></b><small>社区创作者</small></div>
+          <div class="mrtm-stat"><b data-count="9">0<span>年</span></b><small>品牌持续运营</small></div>
+        </div>
+      </div>
+      <div class="mrtm-hero-visual">
+        <div class="mrtm-float-card"><b>本周首播</b><small>《城市慢镜头》S2 · 老码头</small></div>
+        <div class="mrtm-hero-frame">
+          <img alt="孟若羽城市慢镜头第二季老码头首播封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23251a48'/%3E%3Cstop offset='0.55' stop-color='%235d3aa8'/%3E%3Cstop offset='1' stop-color='%23ff7a9c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23g1)'/%3E%3Ccircle cx='620' cy='128' r='66' fill='%23ffb347' opacity='0.92'/%3E%3Cpath d='M0 430 L150 330 L300 386 L470 296 L640 372 L800 312 L800 550 L0 550 Z' fill='%23170f2b' opacity='0.85'/%3E%3Cpath d='M0 470 L180 410 L360 452 L560 396 L800 452 L800 550 L0 550 Z' fill='%23110a20'/%3E%3Cg stroke='%23ffffff' stroke-opacity='0.28' stroke-width='2'%3E%3Cpath d='M90 500 L90 380 M120 500 L120 410 M150 500 L150 356'/%3E%3C/g%3E%3Ccircle cx='368' cy='232' r='46' fill='%23fff' opacity='0.16'/%3E%3Cpath d='M352 210 L394 232 L352 254 Z' fill='%23fff'/%3E%3C/svg%3E">
+          <div class="mrtm-hero-play">
+            <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+            <span><b>城市慢镜头 · 老码头</b><small>时长 18:42 · 孟若羽 主创</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌解析 -->
+  <section class="mrtm-section mrtm-about" id="mrtm-about">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">品牌定位与深度解析</span>
+        <h2 class="mrtm-h2">孟若羽金宝娜天美传媒：一个持续生长的原创影像品牌</h2>
+        <p class="mrtm-lead">从一个小小的工作室，到拥有完整内容生态的视频品牌，天美传媒用九年时间回答了同一件事——怎样拍出让人愿意安静看完的影像。</p>
+      </div>
+      <div class="mrtm-about-grid">
+        <div class="mrtm-about-copy">
+          <p>孟若羽金宝娜天美传媒最初成形于一次偶然的合作拍摄。孟若羽擅长在城市街巷里寻找被忽略的声音，金宝娜则习惯把镜头对准手艺人的手与眼神。两种视角相遇，让「天美传媒」这个品牌从一开始就带上了双重气质：既有城市观察的广阔，也有人物访谈的细腻。</p>
+          <p>作为专注原创内容的视频品牌，天美传媒将自身定位为「内容生态的建设者」，而不是单纯的出品方。官方网站上的每一个栏目，都对应着内容生态中的一环：焦点内容呈现品牌最想推荐给观众的精品；热门影像收录社区里口碑积累的原创作品；专题企划围绕季节、地域与人群做长线策划；创作者矩阵则记录那些持续输出、值得被看见的人。</p>
+          <p>在内容方向上，品牌坚持三条主线。第一条是城市与地域记录，团队走进老街、码头、菜市场与社区，用平实的镜头语言保存正在变化的生活现场。第二条是人物访谈，尤其关注手作、非遗、独立创作人群，尝试用对话取代旁白，让被拍摄者自己讲述。第三条是生活方式影像，涵盖居家、料理、阅读与户外，追求「看完想动手做点什么」的温和感染力。</p>
+          <p>品牌的技术与制作标准同样清晰。所有上线内容均以高清规格制作，重视收音与色调统一；重要企划采用统一的视觉系统，确保从封面到画面都保持一致的品质感。天美传媒相信，所谓行业领先并非口号，而是每一次交片时对细节的坚持。</p>
+          <p>社区是天美传媒的另一条生命线。品牌长期开放投稿入口，定期发布选题指南与创作灵感，鼓励新创作者从一支三分钟的短片开始。平台的运营团队会为入选作品提供剪辑建议、封面优化与分发支持，让内容生态保持活水。用户至上的原则体现在细节里：评论区保持开放，反馈会被逐条阅读；榜单不只看播放数据，也看口碑与完播率。</p>
+          <p>九年时间，天美传媒从一个名字变成了一个可以被信赖的品牌。孟若羽与金宝娜依然会出现在拍摄现场，只是身边多了越来越多年轻的创作者。品牌故事仍在书写，而每一部新上线的影像，都是这句话的下一次注脚。</p>
+        </div>
+        <div class="mrtm-about-side">
+          <div class="mrtm-about-card">
+            <h3>品牌使命</h3>
+            <p>用真实影像记录正在发生的生活，让创作者被看见，让好内容被记住。官网作为品牌与社区的共同入口，持续发布精品内容与企业动态。</p>
+          </div>
+          <div class="mrtm-about-card">
+            <h3>内容准则</h3>
+            <p>真实优先、尊重被拍摄者、画面与声音同等重要、拒绝标题化表达。所有原创作品在上线前均经过至少两轮内容审看。</p>
+          </div>
+          <div class="mrtm-about-card">
+            <h3>关键词解析</h3>
+            <p>「孟若羽金宝娜天美传媒」既是两位主创的名字组合，也是品牌对外统一的识别符号。它代表一种合作式的创作方式：不同视角相互补充，最终形成稳定而多元的内容风格。</p>
+            <div class="mrtm-tagcloud">
+              <span class="mrtm-tag">原创影像</span>
+              <span class="mrtm-tag">人物访谈</span>
+              <span class="mrtm-tag">城市记录</span>
+              <span class="mrtm-tag">生活方式</span>
+              <span class="mrtm-tag">创作者社区</span>
+              <span class="mrtm-tag">高清制作</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="mrtm-section" id="mrtm-focus">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">焦点内容 · 官方推荐</span>
+        <h2 class="mrtm-h2">本周值得打开的五部影像</h2>
+        <p class="mrtm-lead">由编辑部与主创共同挑选，涵盖人物、城市与生活三条主线，每一部都代表天美传媒当下的表达水准。</p>
+      </div>
+      <div class="mrtm-focus-grid">
+        <article class="mrtm-video-card">
+          <div class="mrtm-thumb">
+            <img alt="金宝娜访谈手艺人阿禾的竹编工坊封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd9a0'/%3E%3Cstop offset='1' stop-color='%23f26b4e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23g2)'/%3E%3Cg stroke='%235b2d12' stroke-width='5' fill='none' opacity='0.72'%3E%3Cpath d='M120 380 C200 200 300 180 380 330'/%3E%3Cpath d='M200 400 C280 230 380 210 460 350'/%3E%3Cpath d='M300 420 C380 250 480 230 560 370'/%3E%3C/g%3E%3Ccircle cx='640' cy='120' r='72' fill='%23fff3d6' opacity='0.65'/%3E%3Cpath d='M0 402 L800 402 L800 450 L0 450 Z' fill='%234a2410' opacity='0.6'/%3E%3C/svg%3E">
+            <span class="mrtm-thumb-tag">人物访谈</span>
+            <span class="mrtm-thumb-dur">26:18</span>
+            <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+          </div>
+          <div class="mrtm-card-body">
+            <h3 class="mrtm-card-title">《他的手不着急》——金宝娜对话竹编手艺人阿禾</h3>
+            <p class="mrtm-card-desc">在工坊里坐了整整两天，只为等一双手把竹条剖成均匀的丝。金宝娜说，这是她今年最安静的一次拍摄。</p>
+            <div class="mrtm-card-meta">
+              <span class="mrtm-avatar" style="background:linear-gradient(135deg,#ff5f7e,#7b5cff)">金</span>金宝娜
+              <span>·</span><span>11.8 万次播放</span><span>·</span><span>2 天前</span>
+            </div>
+            <div class="mrtm-chip-row"><span class="mrtm-chip">手作</span><span class="mrtm-chip">人物访谈</span><span class="mrtm-chip">非遗</span></div>
+            <div class="mrtm-card-foot">
+              <div class="mrtm-acts">
+                <button class="mrtm-act" data-mrtm-like><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.6-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.4-9 9-9 9z"/></svg><span>1.2k</span></button>
+                <button class="mrtm-act" data-mrtm-save><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>收藏</span></button>
+              </div>
+              <button class="mrtm-share-link" data-mrtm-share>分享</button>
+            </div>
+          </div>
+        </article>
+        <div class="mrtm-focus-side">
+          <article class="mrtm-video-card">
+            <div class="mrtm-thumb">
+              <img alt="孟若羽城市慢镜头清晨菜市场影像封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%232e4a5e'/%3E%3Ccircle cx='640' cy='96' r='58' fill='%23ffcf7a' opacity='0.85'/%3E%3Crect y='300' width='800' height='150' fill='%231b2d3b'/%3E%3Cg fill='%23f7f3ec' opacity='0.82'%3E%3Crect x='90' y='250' width='90' height='70' rx='6'/%3E%3Crect x='210' y='240' width='90' height='80' rx='6'/%3E%3Crect x='330' y='258' width='90' height='62' rx='6'/%3E%3C/g%3E%3Cg stroke='%23ffcf7a' stroke-width='3' opacity='0.55'%3E%3Cpath d='M60 210 L740 210'/%3E%3C/g%3E%3C/svg%3E">
+              <span class="mrtm-thumb-tag">城市探索</span>
+              <span class="mrtm-thumb-dur">14:05</span>
+              <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+            </div>
+            <div class="mrtm-card-body">
+              <h3 class="mrtm-card-title">城市慢镜头：清晨五点半的菜市场，有最准时的问候</h3>
+              <p class="mrtm-card-desc">摊主们记不住镜头，只记得熟客。孟若羽在这里拍了三个清晨。</p>
+              <div class="mrtm-card-meta"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#3ecfa0,#2e4a5e)">孟</span>孟若羽<span>·</span><span>8.6 万次播放</span></div>
+            </div>
+          </article>
+          <article class="mrtm-video-card">
+            <div class="mrtm-thumb">
+              <img alt="天美传媒居家料理专题一锅慢炖的汤封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23fbe9d2'/%3E%3Ccircle cx='400' cy='250' r='128' fill='%23e06a3c' opacity='0.9'/%3E%3Ccircle cx='400' cy='250' r='98' fill='%23f7c889'/%3E%3Cg stroke='%23ffffff' stroke-width='8' stroke-linecap='round' opacity='0.75'%3E%3Cpath d='M340 150 C320 110 360 96 350 62'/%3E%3Cpath d='M420 140 C400 100 440 88 430 54'/%3E%3C/g%3E%3Cg fill='%23f8f4ea' opacity='0.9'%3E%3Crect x='90' y='330' width='120' height='14' rx='7'/%3E%3Crect x='560' y='330' width='120' height='14' rx='7'/%3E%3C/g%3E%3C/svg%3E">
+              <span class="mrtm-thumb-tag">生活方式</span>
+              <span class="mrtm-thumb-dur">09:36</span>
+              <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+            </div>
+            <div class="mrtm-card-body">
+              <h3 class="mrtm-card-title">一锅汤的三个小时：把周末还给自己</h3>
+              <p class="mrtm-card-desc">没有快进，没有配乐，只有火候和等待。天美传媒生活组的慢节奏实验。</p>
+              <div class="mrtm-card-meta"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#ffb347,#e06a3c)">生</span>生活组<span>·</span><span>6.2 万次播放</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="mrtm-section mrtm-stream" id="mrtm-stream">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">热门影像 · 社区精选</span>
+        <h2 class="mrtm-h2">来自创作者的持续更新</h2>
+        <p class="mrtm-lead">按题材筛选，看看这个社区最近在拍什么。所有作品均为原创首发，支持收藏与分享。</p>
+      </div>
+      <div class="mrtm-filter-row" id="mrtmFilterRow">
+        <button class="mrtm-filter is-on" data-filter="all">全部</button>
+        <button class="mrtm-filter" data-filter="访谈">人物访谈</button>
+        <button class="mrtm-filter" data-filter="城市">城市记录</button>
+        <button class="mrtm-filter" data-filter="生活">生活方式</button>
+        <button class="mrtm-filter" data-filter="幕后">创作幕后</button>
+      </div>
+      <div class="mrtm-video-grid" id="mrtmVideoGrid">
+
+        <article class="mrtm-video-card" data-cat="访谈">
+          <div class="mrtm-thumb">
+            <img alt="孟若羽夜班公交司机访谈影像封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%2313192e'/%3E%3Cg fill='%23ffd166'%3E%3Ccircle cx='140' cy='150' r='9'/%3E%3Ccircle cx='260' cy='110' r='7'/%3E%3Ccircle cx='420' cy='160' r='8'/%3E%3Ccircle cx='600' cy='120' r='7'/%3E%3Ccircle cx='700' cy='200' r='9'/%3E%3C/g%3E%3Crect y='310' width='800' height='140' fill='%230b1020'/%3E%3Crect x='290' y='220' width='220' height='96' rx='16' fill='%23314b7a'/%3E%3Crect x='320' y='238' width='160' height='44' rx='8' fill='%23ffe3a3' opacity='0.8'/%3E%3C/svg%3E">
+            <span class="mrtm-thumb-tag">人物访谈</span><span class="mrtm-thumb-dur">21:14</span>
+            <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+          </div>
+          <div class="mrtm-card-body">
+            <h3 class="mrtm-card-title">夜班末班车：一位公交司机和他记住的乘客</h3>
+            <p class="mrtm-card-desc">十三年、同一条线路、同一句提醒。孟若羽记录下凌晨的城市。</p>
+            <div class="mrtm-card-meta"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#3ecfa0,#2e4a5e)">孟</span>孟若羽<span>·</span><span>9.4 万</span></div>
+            <div class="mrtm-card-foot">
+              <div class="mrtm-acts">
+                <button class="mrtm-act" data-mrtm-like><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.6-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.4-9 9-9 9z"/></svg><span>864</span></button>
+                <button class="mrtm-act" data-mrtm-save><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>收藏</span></button>
+              </div>
+              <button class="mrtm-share-link" data-mrtm-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mrtm-video-card" data-cat="城市">
+          <div class="mrtm-thumb">
+            <img alt="金宝娜老城区骑楼修缮记录影像封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23bfd7e8'/%3E%3Cg fill='%23e8d7b8'%3E%3Crect x='40' y='120' width='220' height='300'/%3E%3Crect x='290' y='170' width='220' height='250'/%3E%3Crect x='540' y='100' width='220' height='320'/%3E%3C/g%3E%3Cg fill='%238a6f52'%3E%3Crect x='70' y='170' width='44' height='58'/%3E%3Crect x='150' y='170' width='44' height='58'/%3E%3Crect x='320' y='220' width='44' height='58'/%3E%3Crect x='400' y='220' width='44' height='58'/%3E%3Crect x='580' y='150' width='44' height='58'/%3E%3Crect x='660' y='150' width='44' height='58'/%3E%3C/g%3E%3Crect y='406' width='800' height='44' fill='%236b7b87'/%3E%3C/svg%3E">
+            <span class="mrtm-thumb-tag">城市记录</span><span class="mrtm-thumb-dur">17:52</span>
+            <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+          </div>
+          <div class="mrtm-card-body">
+            <h3 class="mrtm-card-title">骑楼下的第一百个夏天：老城区修缮日记</h3>
+            <p class="mrtm-card-desc">金宝娜跟拍一支修缮队四十天，记录墙面背后被覆盖的旧时光。</p>
+            <div class="mrtm-card-meta"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#ff5f7e,#7b5cff)">金</span>金宝娜<span>·</span><span>7.1 万</span></div>
+            <div class="mrtm-card-foot">
+              <div class="mrtm-acts">
+                <button class="mrtm-act" data-mrtm-like><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.6-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.4-9 9-9 9z"/></svg><span>712</span></button>
+                <button class="mrtm-act" data-mrtm-save><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>收藏</span></button>
+              </div>
+              <button class="mrtm-share-link" data-mrtm-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mrtm-video-card" data-cat="生活">
+          <div class="mrtm-thumb">
+            <img alt="天美传媒阳台种植三十天记录影像封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23dff0d8'/%3E%3Crect y='330' width='800' height='120' fill='%23a8c69a'/%3E%3Cg fill='%23558049'%3E%3Cpath d='M210 330 C200 250 240 210 290 200 C300 260 270 310 210 330 Z'/%3E%3Cpath d='M390 330 C380 240 430 190 490 184 C500 252 460 310 390 330 Z'/%3E%3Cpath d='M570 330 C560 258 600 216 650 210 C660 268 630 314 570 330 Z'/%3E%3C/g%3E%3Ccircle cx='660' cy='98' r='46' fill='%23ffd166'/%3E%3C/svg%3E">
+            <span class="mrtm-thumb-tag">生活方式</span><span class="mrtm-thumb-dur">11:27</span>
+            <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+          </div>
+          <div class="mrtm-card-body">
+            <h3 class="mrtm-card-title">阳台种植三十天：失败七次之后终于长出第一片叶</h3>
+            <p class="mrtm-card-desc">一支不美化失败的记录，附完整种植笔记与光照建议。</p>
+            <div class="mrtm-card-meta"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#3ecfa0,#7bbf5a)">植</span>阿植<span>·</span><span>5.8 万</span></div>
+            <div class="mrtm-card-foot">
+              <div class="mrtm-acts">
+                <button class="mrtm-act" data-mrtm-like><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.6-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.4-9 9-9 9z"/></svg><span>538</span></button>
+                <button class="mrtm-act" data-mrtm-save><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>收藏</span></button>
+              </div>
+              <button class="mrtm-share-link" data-mrtm-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mrtm-video-card" data-cat="幕后">
+          <div class="mrtm-thumb">
+            <img alt="天美传媒纪录片拍摄现场幕后花絮封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23201633'/%3E%3Cg stroke='%23ffb347' stroke-width='4' fill='none'%3E%3Crect x='260' y='150' width='200' height='120' rx='12'/%3E%3Ccircle cx='360' cy='210' r='34'/%3E%3Cpath d='M460 186 L540 152 L540 268 L460 234'/%3E%3C/g%3E%3Cg stroke='%237b5cff' stroke-width='3' opacity='0.7'%3E%3Cpath d='M120 360 L680 360'/%3E%3Cpath d='M180 330 L180 390'/%3E%3Cpath d='M620 330 L620 390'/%3E%3C/g%3E%3Ccircle cx='660' cy='110' r='36' fill='%23ff5f7e' opacity='0.8'/%3E%3C/svg%3E">
+            <span class="mrtm-thumb-tag">创作幕后</span><span class="mrtm-thumb-dur">08:44</span>
+            <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+          </div>
+          <div class="mrtm-card-body">
+            <h3 class="mrtm-card-title">我们把机器架在雨里三小时：一次纪录片的拍摄复盘</h3>
+            <p class="mrtm-card-desc">器材清单、收音方案与三个踩过的坑，全部公开。</p>
+            <div class="mrtm-card-meta"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#7b5cff,#201633)">美</span>天美制作组<span>·</span><span>4.9 万</span></div>
+            <div class="mrtm-card-foot">
+              <div class="mrtm-acts">
+                <button class="mrtm-act" data-mrtm-like><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.6-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.4-9 9-9 9z"/></svg><span>467</span></button>
+                <button class="mrtm-act" data-mrtm-save><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>收藏</span></button>
+              </div>
+              <button class="mrtm-share-link" data-mrtm-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mrtm-video-card" data-cat="访谈">
+          <div class="mrtm-thumb">
+            <img alt="金宝娜对话独立书店主理人影像封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23f3e4c8'/%3E%3Cg fill='%23a5533a'%3E%3Crect x='90' y='140' width='34' height='230'/%3E%3Crect x='150' y='170' width='34' height='200'/%3E%3Crect x='520' y='150' width='34' height='220'/%3E%3Crect x='580' y='180' width='34' height='190'/%3E%3C/g%3E%3Cg fill='%233f6e6a'%3E%3Crect x='230' y='200' width='30' height='170'/%3E%3Crect x='290' y='176' width='30' height='194'/%3E%3Crect x='650' y='206' width='30' height='164'/%3E%3C/g%3E%3Ccircle cx='420' cy='200' r='68' fill='%23ffd166' opacity='0.7'/%3E%3Crect y='372' width='800' height='78' fill='%23c79e70'/%3E%3C/svg%3E">
+            <span class="mrtm-thumb-tag">人物访谈</span><span class="mrtm-thumb-dur">23:06</span>
+            <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+          </div>
+          <div class="mrtm-card-body">
+            <h3 class="mrtm-card-title">在书架之间：独立书店主理人的第六年</h3>
+            <p class="mrtm-card-desc">她说，书店不是生意，是一个让人愿意停留的地方。</p>
+            <div class="mrtm-card-meta"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#ff5f7e,#7b5cff)">金</span>金宝娜<span>·</span><span>6.6 万</span></div>
+            <div class="mrtm-card-foot">
+              <div class="mrtm-acts">
+                <button class="mrtm-act" data-mrtm-like><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.6-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.4-9 9-9 9z"/></svg><span>654</span></button>
+                <button class="mrtm-act" data-mrtm-save><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>收藏</span></button>
+              </div>
+              <button class="mrtm-share-link" data-mrtm-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mrtm-video-card" data-cat="城市">
+          <div class="mrtm-thumb">
+            <img alt="孟若羽地铁换乘站声音采集影像封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23222b38'/%3E%3Cpath d='M0 200 L800 140 L800 450 L0 450 Z' fill='%23374052'/%3E%3Cg stroke='%23ffb347' stroke-width='3' opacity='0.6'%3E%3Cpath d='M100 420 L240 220'/%3E%3Cpath d='M300 420 L400 210'/%3E%3Cpath d='M500 420 L560 200'/%3E%3Cpath d='M700 420 L720 190'/%3E%3C/g%3E%3Cg fill='%23ff5f7e' opacity='0.85'%3E%3Ccircle cx='400' cy='120' r='26'/%3E%3Ccircle cx='180' cy='90' r='14'/%3E%3Ccircle cx='640' cy='110' r='18'/%3E%3C/g%3E%3C/svg%3E">
+            <span class="mrtm-thumb-tag">城市记录</span><span class="mrtm-thumb-dur">12:39</span>
+            <span class="mrtm-thumb-tri"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 L19 12 L8 19 Z"/></svg></span>
+          </div>
+          <div class="mrtm-card-body">
+            <h3 class="mrtm-card-title">把耳朵放在换乘通道：一座城市的声音地图</h3>
+            <p class="mrtm-card-desc">脚步声、广播、拉杆箱。孟若羽用一支麦克风画出城市轮廓。</p>
+            <div class="mrtm-card-meta"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#3ecfa0,#2e4a5e)">孟</span>孟若羽<span>·</span><span>5.3 万</span></div>
+            <div class="mrtm-card-foot">
+              <div class="mrtm-acts">
+                <button class="mrtm-act" data-mrtm-like><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.6-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.4-9 9-9 9z"/></svg><span>502</span></button>
+                <button class="mrtm-act" data-mrtm-save><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>收藏</span></button>
+              </div>
+              <button class="mrtm-share-link" data-mrtm-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="mrtm-section mrtm-topics" id="mrtm-topics">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">专题企划 · 长线策划</span>
+        <h2 class="mrtm-h2">正在进行的四个内容企划</h2>
+        <p class="mrtm-lead">专题是天美传媒表达态度的地方。我们提前一年排期，只为把每个题材拍到足够深。</p>
+      </div>
+      <div class="mrtm-topic-grid">
+        <article class="mrtm-topic">
+          <img alt="城市慢镜头专题第二季城市夜景封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 420'%3E%3Crect width='600' height='420' fill='%23201740'/%3E%3Cg fill='%23ffb347' opacity='0.9'%3E%3Crect x='60' y='200' width='70' height='180'/%3E%3Crect x='170' y='150' width='70' height='230'/%3E%3Crect x='280' y='230' width='70' height='150'/%3E%3Crect x='390' y='170' width='70' height='210'/%3E%3Crect x='500' y='210' width='70' height='170'/%3E%3C/g%3E%3Ccircle cx='120' cy='90' r='44' fill='%23ff5f7e' opacity='0.8'/%3E%3Crect y='380' width='600' height='40' fill='%230f0a1e'/%3E%3C/svg%3E">
+          <div class="mrtm-topic-in">
+            <span class="mrtm-topic-status mrtm-status-live">更新中 · 第 2 季</span>
+            <h3>城市慢镜头</h3>
+            <p>每一集只拍一个地点、一段时间，不设旁白，让城市自己说话。本季走进码头、天桥与夜市。</p>
+          </div>
+        </article>
+        <article class="mrtm-topic">
+          <img alt="对话三十位手艺人专题工坊木桌工具封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 420'%3E%3Crect width='600' height='420' fill='%23e6c79a'/%3E%3Crect y='270' width='600' height='150' fill='%23945b32'/%3E%3Cg fill='%234a2c14'%3E%3Crect x='120' y='170' width='18' height='110' rx='6'/%3E%3Crect x='180' y='150' width='26' height='130' rx='6'/%3E%3Crect x='250' y='190' width='14' height='90' rx='6'/%3E%3C/g%3E%3Cg fill='%237b5cff' opacity='0.7'%3E%3Ccircle cx='450' cy='130' r='52'/%3E%3C/g%3E%3Ccircle cx='390' cy='90' r='22' fill='%23ff5f7e'/%3E%3C/svg%3E">
+          <div class="mrtm-topic-in">
+            <span class="mrtm-topic-status mrtm-status-soon">报名中 · 新增 8 席</span>
+            <h3>对话三十位手艺人</h3>
+            <p>金宝娜发起的长期访谈计划，已拍摄十九位。同步开放创作者联合报名与选题推荐。</p>
+          </div>
+        </article>
+        <article class="mrtm-topic">
+          <img alt="真实的力量三周年影像展展墙封面" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 420'%3E%3Crect width='600' height='420' fill='%23f2ece2'/%3E%3Cg fill='%23ffffff' stroke='%2317102b' stroke-width='3'%3E%3Crect x='70' y='80' width='150' height='110'/%3E%3Crect x='250' y='110' width='150' height='110'/%3E%3Crect x='430' y='80' width='110' height='110'/%3E%3C/g%3E%3Cg fill='%237b5cff'%3E%3Crect x='90' y='230' width='440' height='12' rx='6' opacity='0.6'/%3E%3Crect x='90' y='262' width='320' height='12' rx='6' opacity='0.4'/%3E%3Crect x='90' y='294' width='380' height='12' rx='6' opacity='0.3'/%3E%3C/g%3E%3Ccircle cx='500' cy='310' r='42' fill='%23ffb347' opacity='0.8'/%3E%3C/svg%3E">
+          <div class="mrtm-topic-in">
+            <span class="mrtm-topic-status mrtm-status-live">展映中 · 可预约</span>
+            <h3>真实的力量 · 影像展</h3>
+            <p>三周年特别企划，从一百二十支作品中选出三十支，线下展映并同步上线官网专题页。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="mrtm-section" id="mrtm-creators">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">创作者矩阵</span>
+        <h2 class="mrtm-h2">这个品牌背后的人</h2>
+        <p class="mrtm-lead">点击任意卡片可查看创作者档案。天美传媒与签约、合作创作者共同维护内容生态的品质与多元。</p>
+      </div>
+      <div class="mrtm-creators-grid">
+        <article class="mrtm-creator" data-creator="孟若羽：天美传媒联合创始人，擅长城市记录与声音采集。代表企划《城市慢镜头》。九年间走过四十余座城市，主张用最少的介入还原现场。" tabindex="0">
+          <div class="mrtm-creator-avatar" style="background:linear-gradient(135deg,#3ecfa0,#2e4a5e)">孟</div>
+          <h3>孟若羽</h3>
+          <div class="mrtm-creator-role">联合创始人 · 城市记录</div>
+          <p>相信城市的声音比画面更接近真实，随身带着两支麦克风。</p>
+          <div class="mrtm-creator-nums">
+            <span><b>186</b>作品</span>
+            <span><b>24.5 万</b>关注</span>
+          </div>
+        </article>
+        <article class="mrtm-creator" data-creator="金宝娜：天美传媒联合创始人，主攻人物访谈与手作题材。长期跟拍手艺人与独立创作者，主张用对话取代旁白，访谈节奏克制而温柔。" tabindex="0">
+          <div class="mrtm-creator-avatar" style="background:linear-gradient(135deg,#ff5f7e,#7b5cff)">金</div>
+          <h3>金宝娜</h3>
+          <div class="mrtm-creator-role">联合创始人 · 人物访谈</div>
+          <p>擅长在沉默里等一句话，访谈常从一杯茶开始。</p>
+          <div class="mrtm-creator-nums">
+            <span><b>142</b>作品</span>
+            <span><b>21.8 万</b>关注</span>
+          </div>
+        </article>
+        <article class="mrtm-creator" data-creator="阿禾：合作创作者，竹编手艺人兼拍摄者，从被拍摄者变成镜头后的人。作品关注手工艺在当代生活中的位置，镜头语言朴素直接。" tabindex="0">
+          <div class="mrtm-creator-avatar" style="background:linear-gradient(135deg,#ffb347,#e06a3c)">禾</div>
+          <h3>阿禾</h3>
+          <div class="mrtm-creator-role">签约创作者 · 手作</div>
+          <p>竹编手艺人，现在是拿着相机记录同行的人。</p>
+          <div class="mrtm-creator-nums">
+            <span><b>63</b>作品</span>
+            <span><b>9.2 万</b>关注</span>
+          </div>
+        </article>
+        <article class="mrtm-creator" data-creator="林一叙：生活组内容主理人，专注居家、料理与慢节奏日常。其作品强调完整过程与真实失败，运营着社区里的种植与厨房话题。" tabindex="0">
+          <div class="mrtm-creator-avatar" style="background:linear-gradient(135deg,#7b5cff,#3ecfa0)">林</div>
+          <h3>林一叙</h3>
+          <div class="mrtm-creator-role">内容主理人 · 生活方式</div>
+          <p>记录厨房和阳台，也记录没做成的那几次。</p>
+          <div class="mrtm-creator-nums">
+            <span><b>98</b>作品</span>
+            <span><b>13.6 万</b>关注</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事随笔 -->
+  <section class="mrtm-section mrtm-story" id="mrtm-story">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">拍摄随笔</span>
+        <h2 class="mrtm-h2">镜头之外的那些时刻</h2>
+        <p class="mrtm-lead">影像之外，创作者也会写下一点文字。这些随笔与视频互为注脚。</p>
+      </div>
+      <div class="mrtm-story-grid">
+        <article class="mrtm-story-card">
+          <time>2026.11.09</time>
+          <h3>在工坊里坐到第二天下午</h3>
+          <p>阿禾剖竹条的时候几乎不说话。我们把机器放到最远的位置，只留一支领夹麦克风。安静到能听见竹纤维断裂的声音，那一刻我知道这一集不需要配乐。</p>
+          <span class="mrtm-story-more">阅读全文 →</span>
+        </article>
+        <article class="mrtm-story-card">
+          <time>2026.10.27</time>
+          <h3>菜市场的摊主认得我们了</h3>
+          <p>连续三个清晨五点半出现之后，卖豆腐的阿姨开始给我们留豆浆。城市记录最难的不是拍，而是让人慢慢忘记镜头。这大概是我们最珍惜的进度。</p>
+          <span class="mrtm-story-more">阅读全文 →</span>
+        </article>
+        <article class="mrtm-story-card">
+          <time>2026.10.12</time>
+          <h3>关于一次失败的延时拍摄</h3>
+          <p>雨太大，机位进了水，三个人在屋檐下等了三个小时。最后的素材只用了十七秒，但那十七秒是整支片子最好的部分。这也是我们坚持清单式复盘的原因。</p>
+          <span class="mrtm-story-more">阅读全文 →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评价 + 榜单 + 动态 -->
+  <section class="mrtm-section" id="mrtm-news">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">口碑与企业动态</span>
+        <h2 class="mrtm-h2">来自社区的声音，与品牌的下一步</h2>
+        <p class="mrtm-lead">我们保留所有真实评价，也在这里发布官方动态。用户至上不是一句口号，而是每月逐条阅读留言的习惯。</p>
+      </div>
+      <div class="mrtm-voices-grid" style="margin-bottom:34px">
+        <div class="mrtm-voice">
+          <div class="mrtm-voice-top"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#ffb347,#e06a3c)">陈</span><span><b>陈小舟</b><br><small>持续关注 2 年</small></span></div>
+          <div class="mrtm-stars">★★★★★</div>
+          <p>《他的手不着急》看哭了。现在很少有内容愿意让人安静地看一双手干活，天美传媒是那种会为三分钟耐心等两天的团队。</p>
+        </div>
+        <div class="mrtm-voice">
+          <div class="mrtm-voice-top"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#3ecfa0,#2e4a5e)">周</span><span><b>周小满</b><br><small>投稿作者</small></span></div>
+          <div class="mrtm-stars">★★★★★</div>
+          <p>第一次投稿心里没底，编辑给了三页修改建议，连封面字体都标了。作品上线后有六万播放，那一刻真的觉得自己被看见了。</p>
+        </div>
+        <div class="mrtm-voice">
+          <div class="mrtm-voice-top"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#7b5cff,#201633)">李</span><span><b>李知行</b><br><small>影像从业者</small></span></div>
+          <div class="mrtm-stars">★★★★☆</div>
+          <p>制作水准在线，收音和色调都很稳。唯一想提的是专题更新频率可以再快一点，等《城市慢镜头》新一集总是等得有点久。</p>
+        </div>
+        <div class="mrtm-voice">
+          <div class="mrtm-voice-top"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#ff5f7e,#7b5cff)">顾</span><span><b>顾南枝</b><br><small>社区活跃用户</small></span></div>
+          <div class="mrtm-stars">★★★★★</div>
+          <p>喜欢这里的评论区，大家都是认真在讨论内容本身，很少有人吵架。可能因为作品本身就让人没那么急躁。</p>
+        </div>
+        <div class="mrtm-voice">
+          <div class="mrtm-voice-top"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#3ecfa0,#7bbf5a)">吴</span><span><b>吴一禾</b><br><small>在地文化爱好者</small></span></div>
+          <div class="mrtm-stars">★★★★★</div>
+          <p>骑楼那期我反复看了两遍。作为一个在老城区长大的人，第一次看到有人把我们那条街拍得这么体面，谢谢金宝娜。</p>
+        </div>
+        <div class="mrtm-voice">
+          <div class="mrtm-voice-top"><span class="mrtm-avatar" style="background:linear-gradient(135deg,#ffb347,#7b5cff)">沈</span><span><b>沈叙白</b><br><small>品牌合作方</small></span></div>
+          <div class="mrtm-stars">★★★★☆</div>
+          <p>合作过一期联名企划，流程规范，沟通直接，交片时间比约定还早两天。这种靠谱在内容行业里其实挺稀缺。</p>
+        </div>
+      </div>
+
+      <div class="mrtm-split">
+        <div>
+          <div class="mrtm-section-head" style="margin-bottom:16px">
+            <span class="mrtm-eyebrow">本周榜单</span>
+            <h3 class="mrtm-h2" style="font-size:22px;margin:6px 0 0">口碑与热度双榜</h3>
+          </div>
+          <div class="mrtm-rank">
+            <div class="mrtm-rank-row"><span class="mrtm-rank-no">1</span><span class="mrtm-rank-t">《他的手不着急》· 金宝娜</span><span class="mrtm-rank-v">口碑 9.8</span></div>
+            <div class="mrtm-rank-row"><span class="mrtm-rank-no">2</span><span class="mrtm-rank-t">夜班末班车 · 孟若羽</span><span class="mrtm-rank-v">热度 9.4</span></div>
+            <div class="mrtm-rank-row"><span class="mrtm-rank-no">3</span><span class="mrtm-rank-t">骑楼下的第一百个夏天 · 金宝娜</span><span class="mrtm-rank-v">口碑 9.2</span></div>
+            <div class="mrtm-rank-row"><span class="mrtm-rank-no">4</span><span class="mrtm-rank-t">阳台种植三十天 · 阿植</span><span class="mrtm-rank-v">完播 8.9</span></div>
+            <div class="mrtm-rank-row"><span class="mrtm-rank-no">5</span><span class="mrtm-rank-t">把耳朵放在换乘通道 · 孟若羽</span><span class="mrtm-rank-v">热度 8.7</span></div>
+            <div class="mrtm-rank-row"><span class="mrtm-rank-no">6</span><span class="mrtm-rank-t">雨里三小时的拍摄复盘 · 天美制作组</span><span class="mrtm-rank-v">新人 8.6</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="mrtm-section-head" style="margin-bottom:16px">
+            <span class="mrtm-eyebrow">官方发布</span>
+            <h3 class="mrtm-h2" style="font-size:22px;margin:6px 0 0">企业动态</h3>
+          </div>
+          <div class="mrtm-news">
+            <div class="mrtm-news-item">
+              <time>2026.11.18</time>
+              <h3>《城市慢镜头》第二季定档 11 月 24 日，首期老码头同步上线官网专题页</h3>
+            </div>
+            <div class="mrtm-news-item">
+              <time>2026.11.15</time>
+              <h3>冬季创作者扶持计划开启报名，新增 12 个原创选题与剪辑指导名额</h3>
+            </div>
+            <div class="mrtm-news-item">
+              <time>2026.11.06</time>
+              <h3>三周年影像展「真实的力量」开放预约，展映 30 支精选作品</h3>
+            </div>
+            <div class="mrtm-news-item">
+              <time>2026.10.29</time>
+              <h3>官方发布内容制作准则 2.0 版，进一步明确收音与色调的统一规范</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mrtm-section mrtm-faq" id="mrtm-faq">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">帮助中心</span>
+        <h2 class="mrtm-h2">常见问题</h2>
+        <p class="mrtm-lead">关于品牌、内容与投稿，这里整理了你最可能想知道的几件事。</p>
+      </div>
+      <details>
+        <summary>天美传媒是一家什么样的企业？</summary>
+        <p>天美传媒是专注原创影像内容与创作者社区的影像品牌，由孟若羽、金宝娜共同发起。品牌深耕人物访谈、城市记录与生活方式影像等垂直领域，官网集中呈现精品内容、专题企划、创作者档案与企业动态。</p>
+      </details>
+      <details>
+        <summary>页面上的作品都是原创的吗？画质规格如何？</summary>
+        <p>官网展示的内容均为原创首发或经授权的合作作品，制作上统一采用高清规格，重视收音与色调一致性。部分早期作品为保持年代质感保留了原始画幅比例。</p>
+      </details>
+      <details>
+        <summary>普通创作者如何向品牌投稿？</summary>
+        <p>可通过页面底部的投稿入口提交作品链接与简介，或使用联系表单说明选题。编辑部通常在一周内回复，入选作品会获得剪辑建议、封面优化与分发支持。</p>
+      </details>
+      <details>
+        <summary>专题企划的更新节奏是怎样的？</summary>
+        <p>《城市慢镜头》按季更新，每季 6 至 8 集；《对话三十位手艺人》为长期计划，每月上线 1 至 2 位；三周年影像展为限时企划，展映结束后会在官网保留作品索引。</p>
+      </details>
+      <details>
+        <summary>品牌是否接受商业合作与联名企划？</summary>
+        <p>接受。我们更倾向与调性一致、尊重内容的伙伴合作，合作方式包括联合出品、专题联名与线下展映。请通过联系表单说明合作背景与时间预期。</p>
+      </details>
+      <details>
+        <summary>为什么有些作品的评论区是开放的？</summary>
+        <p>开放评论是天美传媒的原则之一。我们相信真实反馈能让内容生态保持健康，因此保留讨论空间，同时对不友善内容进行必要管理。</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 联系与投稿 -->
+  <section class="mrtm-section mrtm-contact" id="mrtm-contact">
+    <div class="mrtm-wrap">
+      <div class="mrtm-section-head">
+        <span class="mrtm-eyebrow">联系我们 · 一起创作</span>
+        <h2 class="mrtm-h2">把你想拍的故事，交给它一个开始</h2>
+        <p class="mrtm-lead">无论是投稿、合作还是建议，我们都会认真读。天美传媒期待与更多创作者同行。</p>
+      </div>
+      <div class="mrtm-contact-grid">
+        <form class="mrtm-contact-form" id="mrtmContactForm">
+          <label for="mrtmName">称呼</label>
+          <input id="mrtmName" type="text" placeholder="怎么称呼你" required>
+          <label for="mrtmType">来意</label>
+          <select id="mrtmType">
+            <option>作品投稿</option>
+            <option>商业合作</option>
+            <option>选题推荐</option>
+            <option>反馈建议</option>
+          </select>
+          <label for="mrtmMsg">内容说明</label>
+          <textarea id="mrtmMsg" placeholder="简单描述你的作品或想法，附上链接更好" required></textarea>
+          <button class="mrtm-btn mrtm-btn-light" type="submit">提交给编辑部</button>
+        </form>
+        <div class="mrtm-contact-info">
+          <div class="mrtm-info-card">
+            <h3>投稿与选题</h3>
+            <p>长期开放。欢迎三分钟以上的原创短片、纪录片段与人物访谈，题材不限，但请确保画面与声音基本可用。</p>
+          </div>
+          <div class="mrtm-info-card">
+            <h3>合作与联名</h3>
+            <p>品牌联名、专题联合出品、线下展映与院校合作均可洽谈。请提供合作背景、时间安排与预期目标。</p>
+          </div>
+          <div class="mrtm-info-card">
+            <h3>媒体与采访</h3>
+            <p>关于孟若羽、金宝娜的采访邀约，请说明媒体属性与议题方向，我们会在一周内回复。</p>
+          </div>
+          <div class="mrtm-info-card">
+            <h3>办公与展映空间</h3>
+            <p>天美传媒影像空间长期开放小型放映与分享活动，社区创作者可申请使用，需提前预约。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mrtm-footer">
+  <div class="mrtm-wrap">
+    <div class="mrtm-footer-grid">
+      <div>
+        <h4>天美传媒 · 官方网站</h4>
+        <p>专注原创影像与创作者社区的视频品牌，由孟若羽、金宝娜共同发起。深耕人物访谈、城市记录与生活方式影像，持续运营高品质内容生态。</p>
+        <p>官方网站 · 原创首发 · 高清制作 · 值得信赖</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#mrtm-focus">焦点内容</a></li>
+          <li><a href="#mrtm-stream">热门影像</a></li>
+          <li><a href="#mrtm-topics">专题企划</a></li>
+          <li><a href="#mrtm-story">拍摄随笔</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于品牌</h4>
+        <ul>
+          <li><a href="#mrtm-about">品牌定位</a></li>
+          <li><a href="#mrtm-creators">创作者矩阵</a></li>
+          <li><a href="#mrtm-news">企业动态</a></li>
+          <li><a href="#mrtm-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与方式</h4>
+        <ul>
+          <li><a href="#mrtm-contact">投稿入口</a></li>
+          <li><a href="#mrtm-contact">合作洽谈</a></li>
+          <li><a href="#mrtm-contact">反馈建议</a></li>
+          <li><a href="#mrtm-topics">展映预约</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mrtm-footer-bottom">
+      <span>© 2026 孟若羽金宝娜天美传媒 版权所有 · 持续运营中</span>
+      <span>品牌官网 · 内容生态 · 用户至上 · 社会责任</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mrtm-toast" id="mrtmToast">已完成</div>
+<button class="mrtm-totop" id="mrtmToTop" aria-label="回到顶部"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l7 8h-5v6h-4v-6H5z"/></svg></button>
+
+<div class="mrtm-modal" id="mrtmModal">
+  <div class="mrtm-modal-box" id="mrtmModalBox"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 公告轮播 ---------- */
+  var roll = document.getElementById("mrtmNoticeRoll");
+  if (roll) {
+    var items = roll.querySelectorAll("span");
+    var idx = 0;
+    setInterval(function(){
+      items[idx].classList.remove("is-on");
+      idx = (idx + 1) % items.length;
+      items[idx].classList.add("is-on");
+    }, 4200);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById("mrtmBurger");
+  var nav = document.getElementById("mrtmNav");
+  if (burger && nav) {
+    burger.addEventListener("click", function(){
+      var open = nav.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    nav.addEventListener("click", function(e){
+      if (e.target.tagName === "A") {
+        nav.classList.remove("is-open");
+        burger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* ---------- 导航高亮 ---------- */
+  var navLinks = nav ? nav.querySelectorAll("a") : [];
+  var sections = [];
+  navLinks.forEach(function(a){
+    var id = a.getAttribute("href");
+    if (id && id.charAt(0) === "#") {
+      var el = document.querySelector(id);
+      if (el) sections.push({link: a, el: el});
+    }
+  });
+  function onScrollNav(){
+    var y = window.scrollY + 140;
+    var current = sections[0];
+    sections.forEach(function(s){
+      if (s.el.offsetTop <= y) current = s;
+    });
+    navLinks.forEach(function(a){ a.classList.remove("is-active"); });
+    if (current) current.link.classList.add("is-active");
+  }
+  window.addEventListener("scroll", onScrollNav, {passive:true});
+
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById("mrtmToast");
+  var toastTimer;
+  function showToast(msg){
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("is-on"); }, 2100);
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var sInput = document.getElementById("mrtmSearchInput");
+  var sBtn = document.getElementById("mrtmSearchBtn");
+  var sTip = document.getElementById("mrtmSearchTip");
+  var searchData = ["孟若羽","金宝娜","天美传媒","城市慢镜头","人物访谈","手作","生活方式","创作幕后","骑楼","影像展"];
+  function doSearch(){
+    if (!sInput || !sTip) return;
+    var kw = sInput.value.trim();
+    if (!kw) {
+      showToast("请输入关键词，如：城市慢镜头");
+      return;
+    }
+    var hit = searchData.filter(function(d){ return d.indexOf(kw) > -1 || kw.indexOf(d) > -1; });
+    sTip.textContent = hit.length
+      ? "找到 " + hit.length + " 个相关条目：" + hit.join("、")
+      : "暂未找到「" + kw + "」，可尝试：城市慢镜头、手作、人物访谈";
+    sTip.classList.add("is-on");
+    clearTimeout(sTip._t);
+    sTip._t = setTimeout(function(){ sTip.classList.remove("is-on"); }, 3800);
+  }
+  if (sBtn) sBtn.addEventListener("click", doSearch);
+  if (sInput) sInput.addEventListener("keydown", function(e){ if (e.key === "Enter") doSearch(); });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener("click", function(e){
+    var likeBtn = e.target.closest("[data-mrtm-like]");
+    if (likeBtn) {
+      var span = likeBtn.querySelector("span");
+      var num = parseInt((span.textContent || "0").replace(/[^\d]/g, ""), 10) || 0;
+      if (likeBtn.classList.toggle("is-liked")) {
+        num += 1;
+        showToast("已点赞，感谢你的支持");
+      } else {
+        num = Math.max(0, num - 1);
+        showToast("已取消点赞");
+      }
+      span.textContent = num >= 1000 ? (num / 1000).toFixed(1) + "k" : num;
+      return;
+    }
+    var saveBtn = e.target.closest("[data-mrtm-save]");
+    if (saveBtn) {
+      var on = saveBtn.classList.toggle("is-saved");
+      saveBtn.querySelector("span").textContent = on ? "已收藏" : "收藏";
+      showToast(on ? "已加入收藏夹" : "已取消收藏");
+      return;
+    }
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var modal = document.getElementById("mrtmModal");
+  var modalBox = document.getElementById("mrtmModalBox");
+  function openModal(html){
+    if (!modal || !modalBox) return;
+    modalBox.innerHTML = html;
+    modal.classList.add("is-on");
+  }
+  function closeModal(){
+    if (modal) modal.classList.remove("is-on");
+  }
+  if (modal) {
+    modal.addEventListener("click", function(e){
+      if (e.target === modal || e.target.hasAttribute("data-mrtm-close")) closeModal();
+    });
+  }
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape") closeModal();
+  });
+
+  var shareTemplate = '<h3>分享这部作品</h3>' +
+    '<p>选择分享方式，或复制链接发送给朋友。</p>' +
+    '<div class="mrtm-share-row">' +
+    '<button data-mrtm-copy>复制链接</button>' +
+    '<button data-mrtm-share-to="微信">微信</button>' +
+    '<button data-mrtm-share-to="微博">微博</button>' +
+    '<button data-mrtm-share-to="QQ">QQ</button>' +
+    '</div>' +
+    '<div style="margin-top:16px;text-align:right"><button class="mrtm-btn mrtm-btn-ghost" data-mrtm-close>关闭</button></div>';
+
+  var submitTemplate = '<h3>投稿入口</h3>' +
+    '<p>天美传媒长期开放投稿。请在下方填写称呼与作品简介，编辑部将在一周内通过站内表单回复你。</p>' +
+    '<div class="mrtm-share-row">' +
+    '<button data-mrtm-share-to="表格">填写投稿表</button>' +
+    '<button data-mrtm-share-to="邮箱">邮件投稿</button>' +
+    '</div>' +
+    '<div style="margin-top:16px;text-align:right"><button class="mrtm-btn mrtm-btn-ghost" data-mrtm-close>稍后再说</button></div>';
+
+  document.addEventListener("click", function(e){
+    if (e.target.closest("[data-mrtm-share]")) {
+      openModal(shareTemplate);
+      return;
+    }
+    var m = e.target.closest("[data-mrtm-modal]");
+    if (m) {
+      openModal(submitTemplate);
+      return;
+    }
+    var copyBtn = e.target.closest("[data-mrtm-copy]");
+    if (copyBtn) {
+      var link = "孟若羽金宝娜天美传媒 · 品牌官网原创影像专题";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(function(){
+          showToast("链接已复制");
+          closeModal();
+        }).catch(function(){
+          showToast("复制失败，请手动选择");
+        });
+      } else {
+        showToast("链接已复制");
+        closeModal();
+      }
+      return;
+    }
+    var toBtn = e.target.closest("[data-mrtm-share-to]");
+    if (toBtn) {
+      showToast("已准备跳转至" + toBtn.getAttribute("data-mrtm-share-to") + "分享");
+      closeModal();
+    }
+  });
+
+  /* ---------- 创作者档案弹窗 ---------- */
+  document.addEventListener("click", function(e){
+    var card = e.target.closest(".mrtm-creator");
+    if (!card) return;
+    openModal('<h3>创作者档案</h3><p>' + card.getAttribute("data-creator") + '</p>' +
+      '<div style="text-align:right"><button class="mrtm-btn mrtm-btn-ghost" data-mrtm-close>关闭</button></div>');
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Enter" && document.activeElement && document.activeElement.classList.contains("mrtm-creator")) {
+      document.activeElement.click();
+    }
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var filterRow = document.getElementById("mrtmFilterRow");
+  var grid = document.getElementById("mrtmVideoGrid");
+  if (filterRow && grid) {
+    filterRow.addEventListener("click", function(e){
+      var btn = e.target.closest(".mrtm-filter");
+      if (!btn) return;
+      filterRow.querySelectorAll(".mrtm-filter").forEach(function(b){ b.classList.remove("is-on"); });
+      btn.classList.add("is-on");
+      var f = btn.getAttribute("data-filter");
+      var cards = grid.querySelectorAll(".mrtm-video-card");
+      var shown = 0;
+      cards.forEach(function(c){
+        var ok = (f === "all" || c.getAttribute("data-cat") === f);
+        c.style.display = ok ? "" : "none";
+        if (ok) shown++;
+      });
+      showToast(f === "all" ? "已展示全部作品" : "已筛选 " + shown + " 部作品");
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById("mrtmToTop");
+  if (toTop) {
+    window.addEventListener("scroll", function(){
+      if (window.scrollY > 520) toTop.classList.add("is-on");
+      else toTop.classList.remove("is-on");
+    }, {passive:true});
+    toTop.addEventListener("click", function(){
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  }
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = document.querySelectorAll("[data-count]");
+  var counted = false;
+  function runCount(){
+    if (counted || !counters.length) return;
+    var first = counters[0];
+    if (!first) return;
+    var top = first.getBoundingClientRect().top;
+    if (top > window.innerHeight - 60) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute("data-count"), 10);
+      var suffix = el.querySelector("span") ? el.querySelector("span").outerHTML : "";
+      var cur = 0;
+      var step = Math.max(1, Math.round(target / 46));
+      var timer = setInterval(function(){
+        cur += step;
+        if (cur >= target) { cur = target; clearInterval(timer); }
+        el.innerHTML = cur + suffix;
+      }, 28);
+    });
+  }
+  window.addEventListener("scroll", runCount, {passive:true});
+  window.addEventListener("load", runCount);
+
+  /* ---------- 联系表单 ---------- */
+  var form = document.getElementById("mrtmContactForm");
+  if (form) {
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var name = document.getElementById("mrtmName").value.trim();
+      if (!name) {
+        showToast("请填写称呼");
+        return;
+      }
+      showToast("已收到，编辑部会尽快回复你");
+      form.reset();
+    });
+  }
+
+})();
+</script>
+</body>
+        </html>
